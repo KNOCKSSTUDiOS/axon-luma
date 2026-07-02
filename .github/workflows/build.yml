@@ -1,30 +1,46 @@
-name: Build AXON LUMA APK
+name: Build APK
+
 on:
   push:
     branches: [ main ]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
+
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+
+      - name: Accept Android SDK licenses
+        run: |
+          export ANDROID_HOME=$ANDROID_SDK_ROOT
+          yes | sdkmanager --licenses || true
+          sdkmanager "platforms;android-35" "build-tools;35.0.0"
+
       - name: Install dependencies
         run: npm install
+
       - name: Sync Capacitor
         run: npx cap sync android
+
       - name: Build APK
         run: |
           cd android
           chmod +x gradlew
           ./gradlew assembleDebug
+        env:
+          ANDROID_HOME: ${{ env.ANDROID_SDK_ROOT }}
+
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
