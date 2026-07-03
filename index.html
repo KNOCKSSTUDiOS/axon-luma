@@ -3,19 +3,19 @@
 <head>
 
     <!-- 🔥 BRAND TITLE -->
-    <title>KNOCKSSTUDiOS • AXON LUMA Viewer</title>
+    <title>KNOCKSSTUDiOS • AXON‑LUMA UltraHDR Viewer</title>
 
     <!-- 🔥 REQUIRED META -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
     <!-- 🔥 BRAND DESCRIPTION -->
-    <meta name="description" content="KNOCKSSTUDiOS AXON LUMA • UltraHDR 360° material viewer powered by three.js and cinematic GPU rendering.">
+    <meta name="description" content="KNOCKSSTUDiOS AXON‑LUMA • UltraHDR 360° material viewer powered by three.js and cinematic GPU rendering.">
 
-    <!-- 🔥 BRAND COLOR (Dual-Energy Core) -->
+    <!-- 🔥 BRAND COLOR -->
     <meta name="theme-color" content="#00FFE5">
 
-    <!-- 🔥 INLINE CSS (NO EXTERNAL FILE NEEDED) -->
+    <!-- 🔥 INLINE CSS -->
     <style>
         :root {
             --axon-bg: #02030a;
@@ -82,7 +82,7 @@
             border-bottom-color: rgba(0, 140, 255, 0.7);
         }
 
-        /* 🔥 GUI POSITION TWEAK */
+        /* 🔥 GUI POSITION */
         .lil-gui.root {
             right: 18px !important;
             top: 18px !important;
@@ -94,13 +94,13 @@
 
     <!-- 🔥 BRAND INFO BLOCK -->
     <div id="info">
-        <strong>KNOCKSSTUDiOS • AXON LUMA</strong>
+        <strong>KNOCKSSTUDiOS • AXON‑LUMA</strong>
         UltraHDR 360° Material Engine · Dual‑Energy Core Pipeline<br/>
         Cinematic GPU rendering · On‑device ready<br/>
         Powered by <a href="https://threejs.org" target="_blank">three.js</a>
     </div>
 
-    <!-- 🔥 IMPORT MAP (ENGINE DEPENDENCIES) -->
+    <!-- 🔥 IMPORT MAP -->
     <script type="importmap">
     {
         "imports": {
@@ -110,7 +110,7 @@
     }
     </script>
 
-    <!-- 🔥 AXON LUMA ENGINE MODULE -->
+    <!-- 🔥 AXON‑LUMA ENGINE -->
     <script type="module">
 
         import * as THREE from 'three';
@@ -118,7 +118,7 @@
         import { UltraHDRLoader } from 'three/addons/loaders/UltraHDRLoader.js';
         import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
-        /* 🔥 AXON LUMA PARAMS */
+        /* 🔥 AXON‑LUMA PARAMS */
         const params = {
             autoRotate: true,
             metalness: 1.0,
@@ -135,7 +135,7 @@
 
         function init() {
 
-            /* 🔥 RENDERER SETUP */
+            /* 🔥 RENDERER */
             renderer = new THREE.WebGLRenderer({ antialias: true });
             renderer.setPixelRatio(window.devicePixelRatio);
             renderer.setSize(window.innerWidth, window.innerHeight);
