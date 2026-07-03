@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ANDROID_HOME: /usr/local/lib/android/sdk
+
     steps:
       - uses: actions/checkout@v4
 
@@ -45,3 +46,4 @@ jobs:
         with:
           name: axon-luma-debug
           path: android/app/build/outputs/apk/debug/app-debug.apk
+          
