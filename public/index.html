@@ -3,14 +3,14 @@
 <head>
 
     <!-- 🔥 BRAND TITLE -->
-    <title>KNOCKSSTUDiOS • LUCID LUMA AXON Viewer</title>
+    <title>KNOCKSSTUDiOS • AXON LUMA Viewer</title>
 
     <!-- 🔥 REQUIRED META -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
     <!-- 🔥 BRAND DESCRIPTION -->
-    <meta name="description" content="KNOCKSSTUDiOS LUCID LUMA AXON • UltraHDR 360° material viewer powered by three.js and cinematic GPU rendering.">
+    <meta name="description" content="KNOCKSSTUDiOS AXON LUMA • UltraHDR 360° material viewer powered by three.js and cinematic GPU rendering.">
 
     <!-- 🔥 BRAND COLOR (Dual-Energy Core) -->
     <meta name="theme-color" content="#00FFE5">
@@ -18,13 +18,13 @@
     <!-- 🔥 INLINE CSS (NO EXTERNAL FILE NEEDED) -->
     <style>
         :root {
-            --lucid-bg: #02030a;
-            --lucid-panel: rgba(7, 12, 24, 0.96);
-            --lucid-border: rgba(148, 163, 184, 0.55);
-            --lucid-text-main: #e5e7eb;
-            --lucid-text-soft: #9ca3af;
-            --lucid-accent-a: #00ffe5;
-            --lucid-accent-b: #008cff;
+            --axon-bg: #02030a;
+            --axon-panel: rgba(7, 12, 24, 0.96);
+            --axon-border: rgba(148, 163, 184, 0.55);
+            --axon-text-main: #e5e7eb;
+            --axon-text-soft: #9ca3af;
+            --axon-accent-a: #00ffe5;
+            --axon-accent-b: #008cff;
         }
 
         * {
@@ -36,8 +36,8 @@
         body {
             margin: 0;
             background:
-                radial-gradient(circle at 0% 0%, #00ffe510 0, #02030a 40%, #000000 100%);
-            color: var(--lucid-text-main);
+                radial-gradient(circle at 0% 0%, #00ffe510 0, var(--axon-bg) 40%, #000000 100%);
+            color: var(--axon-text-main);
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
             overflow: hidden;
         }
@@ -50,7 +50,7 @@
             padding: 14px 18px;
             border-radius: 14px;
             background: linear-gradient(145deg, #050816f0, #020617f0);
-            border: 1px solid var(--lucid-border);
+            border: 1px solid var(--axon-border);
             box-shadow:
                 0 0 26px rgba(0, 255, 229, 0.35),
                 0 0 52px rgba(0, 140, 255, 0.45);
@@ -72,17 +72,17 @@
         }
 
         #info a {
-            color: var(--lucid-accent-a);
+            color: var(--axon-accent-a);
             text-decoration: none;
             border-bottom: 1px solid rgba(0, 255, 229, 0.4);
         }
 
         #info a:hover {
-            color: var(--lucid-accent-b);
+            color: var(--axon-accent-b);
             border-bottom-color: rgba(0, 140, 255, 0.7);
         }
 
-        /* 🔥 GUI POSITION TWEAK (OPTIONAL) */
+        /* 🔥 GUI POSITION TWEAK */
         .lil-gui.root {
             right: 18px !important;
             top: 18px !important;
@@ -94,7 +94,7 @@
 
     <!-- 🔥 BRAND INFO BLOCK -->
     <div id="info">
-        <strong>KNOCKSSTUDiOS • LUCID LUMA : AXON</strong>
+        <strong>KNOCKSSTUDiOS • AXON LUMA</strong>
         UltraHDR 360° Material Engine · Dual‑Energy Core Pipeline<br/>
         Cinematic GPU rendering · On‑device ready<br/>
         Powered by <a href="https://threejs.org" target="_blank">three.js</a>
@@ -110,7 +110,7 @@
     }
     </script>
 
-    <!-- 🔥 YOUR ENGINE MODULE -->
+    <!-- 🔥 AXON LUMA ENGINE MODULE -->
     <script type="module">
 
         import * as THREE from 'three';
@@ -118,7 +118,7 @@
         import { UltraHDRLoader } from 'three/addons/loaders/UltraHDRLoader.js';
         import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
-        /* 🔥 YOUR PARAMS */
+        /* 🔥 AXON LUMA PARAMS */
         const params = {
             autoRotate: true,
             metalness: 1.0,
