@@ -1,0 +1,124 @@
+/* ============================================================
+   KNOCKSSTUDiOS • LUCID LUMA : AXON
+   UltraHDR 360° Viewer — Cinematic CSS Skin
+   ============================================================ */
+
+:root {
+    --void: #02030a;
+    --panel: rgba(7, 12, 24, 0.96);
+    --border: rgba(148, 163, 184, 0.55);
+    --text-main: #e5e7eb;
+    --text-soft: #9ca3af;
+    --accent-a: #00ffe5;
+    --accent-b: #008cff;
+    --accent-c: #4d00ff;
+}
+
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BACKGROUND — LUCID VOID */
+body {
+    background:
+        radial-gradient(circle at 0% 0%, #00ffe510 0, var(--void) 40%, #000000 100%);
+    color: var(--text-main);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    overflow: hidden;
+}
+
+/* ============================================================
+   INFO PANEL — AXON CONTROL BLOCK
+   ============================================================ */
+#info {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    padding: 14px 18px;
+    border-radius: 14px;
+
+    background: linear-gradient(145deg, #050816f0, #020617f0);
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 0 26px rgba(0, 255, 229, 0.35),
+        0 0 52px rgba(0, 140, 255, 0.45),
+        inset 0 0 22px rgba(0, 255, 229, 0.15);
+
+    font-size: 0.82rem;
+    line-height: 1.5;
+    backdrop-filter: blur(14px);
+}
+
+/* TITLE */
+#info strong {
+    display: block;
+    margin-bottom: 4px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    color: #f9fafb;
+
+    text-shadow:
+        0 0 10px rgba(0, 255, 229, 0.7),
+        0 0 20px rgba(0, 140, 255, 0.9),
+        0 0 40px rgba(77, 0, 255, 0.5);
+}
+
+/* LINKS */
+#info a {
+    color: var(--accent-a);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 255, 229, 0.4);
+}
+
+#info a:hover {
+    color: var(--accent-b);
+    border-bottom-color: rgba(0, 140, 255, 0.7);
+}
+
+/* ============================================================
+   GUI PANEL — LIL-GUI SKIN
+   ============================================================ */
+.lil-gui.root {
+    right: 18px !important;
+    top: 18px !important;
+
+    background: var(--panel) !important;
+    border: 1px solid var(--border) !important;
+
+    box-shadow:
+        0 0 26px rgba(0, 255, 229, 0.35),
+        0 0 52px rgba(0, 140, 255, 0.45);
+}
+
+.lil-gui .title {
+    color: var(--accent-a) !important;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.lil-gui .controller {
+    color: var(--text-main) !important;
+}
+
+.lil-gui input[type="range"]::-webkit-slider-thumb {
+    background: var(--accent-a) !important;
+}
+
+.lil-gui input[type="range"] {
+    accent-color: var(--accent-b) !important;
+}
+
+/* ============================================================
+   OPTIONAL: CANVAS GLOW RING
+   ============================================================ */
+canvas {
+    outline: none;
+    box-shadow:
+        0 0 40px rgba(0, 255, 229, 0.25),
+        0 0 80px rgba(0, 140, 255, 0.35);
+}
